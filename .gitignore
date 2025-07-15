@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+env/
+.venv/
+
+# Dataset input/output
+data/
+output/
+
+# Benchmark result files
+*.npy
+*.npz
+*.pkl
+*.gz
+.csv#
+
+*.txt
+
+# Jupyter/IPython
+.ipynb_checkpoints/
+
+# Misc
+.DS_Store
+*.swp
+

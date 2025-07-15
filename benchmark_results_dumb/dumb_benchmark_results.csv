@@ -1,0 +1,3 @@
+Dataset,Raw Size (MB),Compressed Size (MB),Reconstructed Size (MB),Unique Tokens,Transform Time (s),Restore Time (s),Correct Roundtrip
+enwik7,9.54,13.52,9.54,97485,2.65,1.34,True
+enwik8,95.37,133.52,95.37,424268,77.24,13.81,True
