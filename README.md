@@ -48,34 +48,50 @@ python bench_dumb.py
 
 ```
 
-Results will appear in benchmark_results/ as CSV for easy review and sharing.
+# 🚀 OKC Dumb Tokenizer: Reference Implementation & Benchmarks Released
 
-## Example Results (enwik8)
+We’re excited to share the **first open-source reference for word-level, reversible tokenization and compression**—the new baseline for [OKCompressor](https://github.com/OKCompressor).
+
+---
+
+## 🔍 Why does this matter?
+
+Most tokenizers and compressors used in LLM pipelines are closed-source or difficult to audit.  
+**OKC Dumb Tokenizer** is fully open, reproducible, and delivers real numbers:
 
 | Method     | Gzipped Size (MB) | Unique Tokens | Round-trip Lossless |
 |------------|-------------------|---------------|---------------------|
 | dumb_pre   | 36.7              | 424,268       | ✅ True             |
 | tiktoken   | 37.0              | 71,161        | ✅ True             |
 
----
-
-## Roadmap
-
-- Rust implementation (target: 10x faster)
-- Binary and advanced output layers
-- Multi-lingual and character-level tokenization
-- Integration as a default layer in OKCompressor
+*(enwik8, gzip compressed)*
 
 ---
 
-## About OKCompressor
+## 🛠️ Features
 
-OKCompressor is a collective for open, benchmarked, and collaborative corpus compression tech.
-
-- [github.com/OKCompressor](https://github.com/OKCompressor)
-- Collaboration, feedback, and forks are welcomed!
+- **Python-based, minimal, and readable**
+- 100% round-trip guarantee
+- Benchmark scripts and public CSV results included
+- Easy to extend, fork, or integrate
 
 ---
 
-*Transparency is the new baseline. Benchmarks are public. The journey is open.*
+## 📈 Roadmap
+
+- [ ] Rust implementation (aiming for 10x speed)
+- [ ] Binary output & advanced layers
+- [ ] Multi-lingual and character tokenization
+- [ ] Seamless integration with OKCompressor suite
+
+---
+
+## 🤝 Join Us!
+
+- Try it out, fork, open an issue, or suggest a feature.
+- Looking for collaborators, researchers, and partners—especially for the next-gen Rust build and real-world testing.
+
+**Transparency is the new baseline. Benchmarks are public. The journey is open.**
+
+[github.com/OKCompressor/dumb_pre](https://github.com/OKCompressor/dumb_pre)
 
