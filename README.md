@@ -61,10 +61,15 @@ Most tokenizers and compressors used in LLM pipelines are closed-source or diffi
 
 | Method     | Gzipped Size (MB) | Unique Tokens | Round-trip Lossless |
 |------------|-------------------|---------------|---------------------|
-| dumb_pre   | 36.7              | 424,268       | ✅ True             |
+| dumb_pre   | 35.8              | 424,268       | ✅ True             |
 | tiktoken   | 37.0              | 71,161        | ✅ True             |
 
 *(enwik8, gzip compressed)*
+
+## 📊 Benchmark Results
+
+- [Raw CSV benchmark results](benchmark_results_dumb/dumb_benchmark_results.csv)
+- [Size report with all output files](benchmark_results_dumb/SIZE_REPORT.md)
 
 ---
 
