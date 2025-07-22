@@ -6,6 +6,8 @@ from interface import Preprocessor
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(message)s')
 
 
+import argparse
+
 class DumbPreprocessor(Preprocessor):
     TAB_TOKEN = "\u0001"  # Using a non-printable character as the token
     SPACE_TOKEN = "\u0002"  # Using a non-printable character as the token
@@ -124,3 +126,29 @@ class DumbPreprocessor(Preprocessor):
         with open(file_path, 'w', encoding='utf-8') as file:
             file.write(data)
         logging.info("Data written to %s", file_path)
+
+
+
+
+
+
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", required=True)
+    parser.add_argument("--dict", required=True)
+    parser.add_argument("--out", required=True)
+    parser.add_argument("--sorted_dict", default=None)
+    parser.add_argument("--restore", action="store_true", help="Restore/roundtrip output as check")
+    parser.add_argument("--restore_out", default=None, help="Where to write restored text if --restore")
+    args = parser.parse_args()
+
+    pre = DumbPreprocessor()
+    pre.transform_text(args.input, args.dict, args.sorted_dict or args.dict, args.out)
+    if args.restore:
+        out_restored = args.restore_out or (args.out + ".restored.txt")
+        pre.restore_text(args.dict, args.out, out_restored)
+
+if __name__ == "__main__":
+    main()
