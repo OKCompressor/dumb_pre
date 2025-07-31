@@ -24,7 +24,7 @@ class DumbPreprocessor(Preprocessor):
         transformed_text = self.replace_tokens_with_indices(tokens, dictionary)
         self.save_transformed_text(transformed_text, output_file)
         self.save_dictionary(dictionary, dict_file)
-        # self.save_sorted_dictionary(dictionary, sorted_dict_file)
+        self.save_sorted_dictionary(dictionary, sorted_dict_file)
 
         return transformed_text
 
